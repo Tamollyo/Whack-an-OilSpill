@@ -1,7 +1,6 @@
-# Whack-an-OilSpill
+# Whack-an-OilSpill: Project 1
 
-GA Project 1 Game
+#Clean/Whack an OilSpill
+_Whack-a-Mole with a twist_
 
-My first game. Let's clean up!
-
-git clean
+## Description
