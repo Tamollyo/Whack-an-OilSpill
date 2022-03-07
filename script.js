@@ -1,26 +1,26 @@
 let score = 0
 const trash = document.querySelector('.trash')
 const tally = document.querySelector('.score')
-let random
+let randomTop
+let randomLeft
 
 //developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 randomLocation = () => {
   min = Math.ceil(80)
   max = Math.floor(20)
-  random = Math.floor(Math.random() * (max - min) + min)
-  console.log(random)
+  randomTop = Math.floor(Math.random() * (max - min) + min)
+  randomLeft = Math.floor(Math.random() * (max - min) + min)
+  trash.style.top = randomTop + '%'
+  trash.style.left = randomLeft + '%'
 }
 
-randomLocation()
-
-trash.style.top = random + '%'
-trash.style.left = random + '%'
+let trashTimer = setInterval(randomLocation, 2000)
 
 trash.addEventListener('click', () => {
   score += 2
   tally.innerText = score
-  trash.style.top = random + '%'
-  trash.style.left = random + '%'
+  trash.style.top = randomTop + '%'
+  trash.style.left = randomLeft + '%'
 })
 
 // function trashMove = () => {
