@@ -1,3 +1,8 @@
+body {
+  background-image: url('https://media.giphy.com/media/lOajUkM5wznxO5w9Fv/giphy.gif');
+  background-size: cover;
+}
+
 .trash {
   display: block;
   position: absolute;

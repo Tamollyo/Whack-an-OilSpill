@@ -14,13 +14,13 @@ randomLocation = () => {
   trash.style.left = randomLeft + '%'
 }
 
-let trashTimer = setInterval(randomLocation, 2000)
+// https://javascript.info/settimeout-setinterval
+let trashTimer = setInterval(randomLocation, 1000)
 
 trash.addEventListener('click', () => {
   score += 2
   tally.innerText = score
-  trash.style.top = randomTop + '%'
-  trash.style.left = randomLeft + '%'
+  randomLocation()
 })
 
 // function trashMove = () => {
