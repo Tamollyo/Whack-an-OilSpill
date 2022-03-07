@@ -110,3 +110,5 @@ _Whack-a-Mole with a twist_
   - Create a button which goes to a seperate HTML page with information about the ocean
 - Record high score?
 - Include objects with different worth
+
+## Credits
