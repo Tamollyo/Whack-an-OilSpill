@@ -15,6 +15,9 @@ body {
   cursor: pointer;
 }
 
+.score {
+  font-size: 80px;
+}
 header {
   display: grid;
   background-color: #3e6e8c;
