@@ -40,32 +40,18 @@ body {
 }
 
 .score {
-  display: grid;
-  justify-items: end;
-  font-size: 80px;
 }
 
 header {
-  display: grid;
-  /* width: 30%; */
-  border-radius: 10px;
-  padding: 8px;
-  margin: left;
 }
 
 footer {
-  display: grid;
-  grid-template-columns: 100px auto 100px;
-  grid-template-rows: 80px auto 80px;
-  column-gap: 10px;
-  row-gap: 15px;
 }
 
 h1 {
   color: antiquewhite;
   font-size: 60px;
   font-family: 'Amatic SC', cursive;
-  width: 95%;
 }
 
 h2 {
@@ -77,7 +63,6 @@ h3 {
   font-family: 'Amatic SC', cursive;
   color: antiquewhite;
   font-size: 20px;
-  width: 95%;
 }
 
 h4,
@@ -85,7 +70,6 @@ li {
   font-family: 'Amatic SC', cursive;
   color: antiquewhite;
   font-size: 20px;
-  width: 95%;
 }
 a:link {
   background-color: #3e6e8c;

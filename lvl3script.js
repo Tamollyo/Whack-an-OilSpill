@@ -157,7 +157,7 @@ timeSetThree = () => {
   }
 }
 
-let playGame1 = () => {
+let playGame = () => {
   randomLocation()
   timeSet()
 }
@@ -172,6 +172,6 @@ let playGame3 = () => {
 // https://javascript.info/settimeout-setinterval
 // let trashTimer = setInterval(randomLocation, timeSet)
 
-let trashTime = setInterval(playGame1, time)
+let trashTime = setInterval(playGame, time)
 let trashTimeTwo = setInterval(playGame2, timeTwo)
 let trashTimeThree = setInterval(playGame3, timeThree)

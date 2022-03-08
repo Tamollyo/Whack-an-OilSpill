@@ -67,17 +67,3 @@ let playGame = () => {
 // let trashTimer = setInterval(randomLocation, timeSet)
 
 let trashTime = setInterval(playGame, time)
-
-// if (score >= 10) {
-//   timeSet -= 4000
-//   console.log(timeSet)
-// }
-
-// function trashMove = () => {
-//   trashX = math.floor(math.random() * gridArr)
-//   trashY = math.floor(math.random() * gridArr)
-// }
-
-// div to move randomly throughout the page
-// - using math.random change x and y position
-// if div is clicked add to score and change position
