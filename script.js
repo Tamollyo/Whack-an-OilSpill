@@ -21,6 +21,9 @@ trash.addEventListener('click', () => {
 restart.addEventListener('click', () => {
   score = 0
   tally.innerText = score
+  time = 3000
+  clearInterval(trashTime)
+  trashTime = setInterval(playGame, time)
 })
 //developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 randomLocation = () => {

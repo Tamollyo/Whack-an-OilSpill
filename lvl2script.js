@@ -33,6 +33,12 @@ trashTwo.addEventListener('click', () => {
 restart.addEventListener('click', () => {
   score = 0
   tally.innerText = score
+  let time = 5000
+  let timeTwo = 3000
+  clearInterval(trashTime)
+  clearInterval(trashTimeTwo)
+  trashTime = setInterval(playGame, time)
+  trashTimeTwo = setInterval(playGame2, timeTwo)
 })
 //developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 randomLocation = () => {
@@ -108,12 +114,15 @@ timeSetTwo = () => {
 
 let playGame = () => {
   randomLocation()
-  randomLocationTwo()
   timeSet()
+}
+
+let playGame2 = () => {
+  randomLocationTwo()
   timeSetTwo()
 }
 // https://javascript.info/settimeout-setinterval
 // let trashTimer = setInterval(randomLocation, timeSet)
 
 let trashTime = setInterval(playGame, time)
-let trashTimeTwo = setInterval(playGame, timeTwo)
+let trashTimeTwo = setInterval(playGame2, timeTwo)

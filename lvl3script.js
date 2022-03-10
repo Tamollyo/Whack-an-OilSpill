@@ -49,6 +49,15 @@ trashThree.addEventListener('click', () => {
 restart.addEventListener('click', () => {
   score = 0
   tally.innerText = score
+  let time = 5000
+  let timeTwo = 3000
+  let timeThree = 1000
+  clearInterval(trashTime)
+  clearInterval(trashTimeTwo)
+  clearInterval(trashTimeThree)
+  trashTime = setInterval(playGame, time)
+  trashTimeTwo = setInterval(playGame2, timeTwo)
+  trashTimeThree = setInterval(playGame3, timeThree)
 })
 //developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 randomLocation = () => {
@@ -136,23 +145,23 @@ timeSetThree = () => {
     timeThree = 1500
   } else if (score > 10 && score <= 20) {
     timeThree = 1000
-    clearInterval(trashTime)
+    clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   } else if (score > 20 && score <= 30) {
     timeThree = 650
-    clearInterval(trashTime)
+    clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   } else if (score > 30 && score <= 40) {
     timeThree = 550
-    clearInterval(trashTime)
+    clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   } else if (score > 40 && score <= 50) {
     timeThree = 450
-    clearInterval(trashTime)
+    clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   } else if (score > 50 && score <= 60) {
     timeThree = 300
-    clearInterval(trashTime)
+    clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   }
 }
