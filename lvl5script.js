@@ -72,7 +72,18 @@ duckFive.addEventListener('click', () => {
 })
 
 let play = () => {
-  let audio = new Audio('./img/Duck Quack 1 - QuickSounds.com (1).mp3')
+  const audios = [
+    './img/Duck Quack 1 - QuickSounds.com (1).mp3',
+    './img/Duck Duckling Chirp 1 - QuickSounds.com.mp3',
+    './img/Duck Quack 2 - QuickSounds.com (1).mp3',
+    './img/Duck Duckling Chirp 2 - QuickSounds.com.mp3',
+    './img/Duck - QuickSounds.com.mp3'
+  ]
+  minPlay = Math.ceil(0)
+  maxPlay = Math.floor(5)
+  let random = Math.floor(Math.random() * (maxPlay - minPlay) + minPlay)
+
+  let audio = new Audio(audios[random])
   audio.play()
 }
 
