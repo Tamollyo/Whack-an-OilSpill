@@ -2,13 +2,18 @@
 
 _Whack-a-Mole with a twist_
 
-##### _By Molly Obermeier_
-
-[Trello](https://trello.com/b/Vtjx2dJ9/project-1-whack-a-mole) | [LinkedIn](https://www.linkedin.com/in/marie-obermeier-6b6b03158/)
+##### _By Molly Obermeier_ | [LinkedIn](https://www.linkedin.com/in/marie-obermeier-6b6b03158/)
 
 ## Description
 
 #### Let's clean up! A player must whack (or clean up) trash or oil as it randomly appears in their ocean. Everytime they successfully clean up the trash it gets added to their overall score.
+
+## Technologies Used
+
+- Planning: [Trello](https://trello.com/b/Vtjx2dJ9/project-1-whack-a-mole)
+- HTML
+- CSS
+- JavaScript
 
 ## Precendents
 

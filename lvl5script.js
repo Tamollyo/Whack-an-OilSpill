@@ -104,23 +104,35 @@ randomLocation = () => {
 timeSet = () => {
   if (score <= 10) {
     time = 2000
+    duckFour.style.visibility = 'hidden'
   } else if (score > 10 && score <= 20) {
     time = 1500
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 20 && score <= 30) {
     time = 1250
+    duckFour.style.visibility = 'visible'
+    trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 30 && score <= 40) {
     time = 1000
+    duckFive.style.visibility = 'hidden'
+    trashTwo.style.visibility = 'visible'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 40 && score <= 50) {
     time = 800
+    duckFive.style.visibility = 'visible'
+    trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 50 && score <= 60) {
+    time = 500
+    trashTwo.style.visibility = 'visible'
+    clearInterval(trashTime)
+    trashTime = setInterval(playGame, time)
+  } else if (score > 60) {
     time = 400
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
