@@ -34,6 +34,13 @@ img {
   left: 80%;
 }
 
+.duckFour {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 60%;
+}
+
 footer {
   grid-area: footer;
   justify-content: end;
