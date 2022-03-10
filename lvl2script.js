@@ -1,6 +1,7 @@
 let score = 0
 let hScore = 0
 let time = 5000
+let timeTwo = 3000
 const trash = document.querySelector('.trash')
 const trashTwo = document.querySelector('.trashTwo')
 const tally = document.querySelector('.score')
@@ -20,7 +21,7 @@ trash.addEventListener('click', () => {
 })
 
 trashTwo.addEventListener('click', () => {
-  score += 4
+  score += 2
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
@@ -29,20 +30,14 @@ trashTwo.addEventListener('click', () => {
   randomLocation()
 })
 
-let visible = () => {
-  if (score % 2 != 1) {
-    document.querySelector('.trashTwo').style.opacity = '0'
-  } else if (score % 2 === 0) {
-    document.querySelector('.trashTwo').style.opacity = '1'
-  }
-}
-
 restart.addEventListener('click', () => {
   score = 0
   tally.innerText = score
   time = 3000
+  timeTwo = 2000
   clearInterval(trashTime)
   trashTime = setInterval(playGame, time)
+  trashTimeTwo = setInterval(playGame, timeTwo)
 })
 
 randomLocation = () => {
@@ -59,24 +54,33 @@ randomLocation = () => {
 timeSet = () => {
   if (score <= 10) {
     time = 3000
+    timeTwo = 1000
   } else if (score > 10 && score <= 20) {
     time = 2000
+    trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 20 && score <= 30) {
     time = 1750
+    timeTwo = 700
+    trashTwo.style.visibility = 'visible'
+    clearInterval(trashTimeTwo)
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
+    trashTimeTwo = setInterval(playGame, timeTwo)
   } else if (score > 30 && score <= 40) {
     time = 1500
+    trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 40 && score <= 50) {
     time = 1000
+    trashTwo.style.visibility = 'visible'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 50 && score <= 60) {
     time = 700
+    trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   }
@@ -85,7 +89,7 @@ timeSet = () => {
 let playGame = () => {
   randomLocation()
   timeSet()
-  visible()
 }
 
 let trashTime = setInterval(playGame, time)
+let trashTimeTwo = setInterval(playGame, timeTwo)
