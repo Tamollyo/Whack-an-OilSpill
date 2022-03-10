@@ -90,25 +90,25 @@ randomLocationThree = () => {
 // https://www.w3schools.com/js/js_operators.asp
 timeSet = () => {
   if (score <= 10) {
-    time = 4000
-  } else if (score > 10 && score <= 20) {
     time = 3000
-    clearInterval(trashTime)
-    trashTime = setInterval(playGame, time)
-  } else if (score > 20 && score <= 30) {
+  } else if (score > 10 && score <= 20) {
     time = 2000
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
-  } else if (score > 30 && score <= 40) {
+  } else if (score > 20 && score <= 30) {
     time = 1000
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
+  } else if (score > 30 && score <= 40) {
+    time = 900
+    clearInterval(trashTime)
+    trashTime = setInterval(playGame, time)
   } else if (score > 40 && score <= 50) {
-    time = 500
+    time = 850
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 50 && score <= 60) {
-    time = 400
+    time = 800
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   }
@@ -118,23 +118,23 @@ timeSetTwo = () => {
   if (score <= 10) {
     timeTwo = 2000
   } else if (score > 10 && score <= 20) {
-    timeTwo = 1000
+    timeTwo = 1500
     clearInterval(trashTimeTwo)
     trashTimeTwo = setInterval(playGame, timeTwo)
   } else if (score > 20 && score <= 30) {
-    timeTwo = 750
+    timeTwo = 1200
     clearInterval(trashTimeTwo)
     trashTimeTwo = setInterval(playGame, timeTwo)
   } else if (score > 30 && score <= 40) {
-    timeTwo = 600
+    timeTwo = 1000
     clearInterval(trashTimeTwo)
     trashTimeTwo = setInterval(playGame, timeTwo)
   } else if (score > 40 && score <= 50) {
-    timeTwo = 500
+    timeTwo = 800
     clearInterval(trashTimeTwo)
     trashTimeTwo = setInterval(playGame, timeTwo)
   } else if (score > 50 && score <= 60) {
-    timeTwo = 400
+    timeTwo = 700
     clearInterval(trashTimeTwo)
     trashTimeTwo = setInterval(playGame, timeTwo)
   }
@@ -148,19 +148,19 @@ timeSetThree = () => {
     clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   } else if (score > 20 && score <= 30) {
-    timeThree = 650
+    timeThree = 950
     clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   } else if (score > 30 && score <= 40) {
-    timeThree = 550
+    timeThree = 850
     clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   } else if (score > 40 && score <= 50) {
-    timeThree = 450
+    timeThree = 750
     clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   } else if (score > 50 && score <= 60) {
-    timeThree = 300
+    timeThree = 600
     clearInterval(trashTimeThree)
     trashTimeThree = setInterval(playGame, timeThree)
   }
@@ -179,7 +179,6 @@ let playGame3 = () => {
   timeSetThree()
 }
 // https://javascript.info/settimeout-setinterval
-// let trashTimer = setInterval(randomLocation, timeSet)
 
 let trashTime = setInterval(playGame, time)
 let trashTimeTwo = setInterval(playGame2, timeTwo)
