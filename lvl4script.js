@@ -1,5 +1,6 @@
 let score = 0
-let hScore = 0
+let hScore = sessionStorage.getItem(`highScore`)
+console.log(hScore)
 let time = 5000
 const trash = document.querySelector('.trash')
 const trashTwo = document.querySelector('.trashTwo')
@@ -7,6 +8,7 @@ const trashThree = document.querySelector('.trashThree')
 const duckFour = document.querySelector('.duckFour')
 const tally = document.querySelector('.score')
 const highScore = document.querySelector('.highScore')
+highScore.innerHTML = hScore
 const restart = document.querySelector('.restart')
 let randomTop
 let randomLeft
@@ -16,6 +18,7 @@ trash.addEventListener('click', () => {
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   randomLocation()
@@ -26,6 +29,7 @@ trashTwo.addEventListener('click', () => {
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   randomLocation()
@@ -36,6 +40,7 @@ trashThree.addEventListener('click', () => {
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   randomLocation()
@@ -46,6 +51,7 @@ duckFour.addEventListener('click', () => {
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   play()

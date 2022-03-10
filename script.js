@@ -13,6 +13,8 @@ trash.addEventListener('click', () => {
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
+    console.log(sessionStorage)
   }
   tally.innerText = score
   randomLocation()
@@ -50,11 +52,16 @@ timeSet = () => {
     time = 1500
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
-  } else if (score > 40 && score <= 50) {
+  } else if (score > 40 && score <= 49) {
     time = 1000
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
-  } else if (score > 50 && score <= 60) {
+  } else if (score > 50 && score <= 51) {
+    time = 1000
+    alert('Nice work! Head to the next level if you are ready!')
+    clearInterval(trashTime)
+    trashTime = setInterval(playGame, time)
+  } else if (score > 51 && score <= 60) {
     time = 800
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)

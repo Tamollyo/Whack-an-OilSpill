@@ -1,11 +1,14 @@
 let score = 0
-let hScore = 0
+let hScore = sessionStorage.getItem(`highScore`)
+console.log(hScore)
 let time = 5000
 let timeTwo = 3000
 const trash = document.querySelector('.trash')
 const trashTwo = document.querySelector('.trashTwo')
 const tally = document.querySelector('.score')
+
 const highScore = document.querySelector('.highScore')
+highScore.innerHTML = hScore
 const restart = document.querySelector('.restart')
 let randomTop
 let randomLeft
@@ -15,6 +18,7 @@ trash.addEventListener('click', () => {
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   randomLocation()
@@ -25,6 +29,7 @@ trashTwo.addEventListener('click', () => {
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   randomLocation()
@@ -64,10 +69,8 @@ timeSet = () => {
     time = 1750
     timeTwo = 700
     trashTwo.style.visibility = 'visible'
-    clearInterval(trashTimeTwo)
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
-    trashTimeTwo = setInterval(playGame, timeTwo)
   } else if (score > 30 && score <= 40) {
     time = 1500
     trashTwo.style.visibility = 'hidden'
@@ -92,4 +95,3 @@ let playGame = () => {
 }
 
 let trashTime = setInterval(playGame, time)
-let trashTimeTwo = setInterval(playGame, timeTwo)

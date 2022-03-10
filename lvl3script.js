@@ -1,11 +1,13 @@
 let score = 0
-let hScore = 0
+let hScore = sessionStorage.getItem(`highScore`)
+console.log(hScore)
 let time = 5000
 const trash = document.querySelector('.trash')
 const trashTwo = document.querySelector('.trashTwo')
 const trashThree = document.querySelector('.trashThree')
 const tally = document.querySelector('.score')
 const highScore = document.querySelector('.highScore')
+highScore.innerHTML = hScore
 const restart = document.querySelector('.restart')
 let randomTop
 let randomLeft
@@ -15,26 +17,29 @@ trash.addEventListener('click', () => {
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   randomLocation()
 })
 
 trashTwo.addEventListener('click', () => {
-  score += 4
+  score += 2
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   randomLocation()
 })
 
 trashThree.addEventListener('click', () => {
-  score += 4
+  score += 3
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
   }
   tally.innerText = score
   randomLocation()
@@ -64,16 +69,22 @@ randomLocation = () => {
 timeSet = () => {
   if (score <= 10) {
     time = 4000
+    trashTwo.style.visibility = 'hidden'
   } else if (score > 10 && score <= 20) {
     time = 2000
+    trashTwo.style.visibility = 'visible'
+    trashThree.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 20 && score <= 30) {
     time = 1500
+    trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 30 && score <= 40) {
     time = 1250
+    trashThree.style.visibility = 'visible'
+    trashTwo.style.visibility = 'visible'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 40 && score <= 50) {
