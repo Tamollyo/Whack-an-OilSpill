@@ -53,9 +53,7 @@ duckFour.addEventListener('click', () => {
 })
 
 let play = () => {
-  let audio = new Audio(
-    'https://quicksounds.com/sound/3351/duck-quack-1&autoplay=true'
-  )
+  let audio = new Audio('./img/Duck Quack 1 - QuickSounds.com (1).mp3')
   audio.play()
 }
 
