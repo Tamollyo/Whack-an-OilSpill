@@ -4,6 +4,7 @@ let time = 5000
 const trash = document.querySelector('.trash')
 const trashTwo = document.querySelector('.trashTwo')
 const trashThree = document.querySelector('.trashThree')
+const duckFour = document.querySelector('.duckFour')
 const tally = document.querySelector('.score')
 const highScore = document.querySelector('.highScore')
 const restart = document.querySelector('.restart')
@@ -21,7 +22,7 @@ trash.addEventListener('click', () => {
 })
 
 trashTwo.addEventListener('click', () => {
-  score += 4
+  score += 2
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
@@ -31,7 +32,17 @@ trashTwo.addEventListener('click', () => {
 })
 
 trashThree.addEventListener('click', () => {
-  score += 4
+  score += 3
+  if (score > hScore) {
+    hScore = score
+    highScore.innerText = hScore
+  }
+  tally.innerText = score
+  randomLocation()
+})
+
+duckFour.addEventListener('click', () => {
+  score -= 3
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
@@ -59,6 +70,8 @@ randomLocation = () => {
   trashTwo.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
   trashThree.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
   trashThree.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckFour.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckFour.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
 }
 
 timeSet = () => {
