@@ -59,7 +59,7 @@ restart.addEventListener('click', () => {
   trashTimeTwo = setInterval(playGame2, timeTwo)
   trashTimeThree = setInterval(playGame3, timeThree)
 })
-//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
 randomLocation = () => {
   min = Math.ceil(80)
   max = Math.floor(20)
@@ -87,7 +87,6 @@ randomLocationThree = () => {
   trashThree.style.left = randomLeft3 + '%'
 }
 
-// https://www.w3schools.com/js/js_operators.asp
 timeSet = () => {
   if (score <= 10) {
     time = 3000
@@ -178,7 +177,6 @@ let playGame3 = () => {
   randomLocationThree()
   timeSetThree()
 }
-// https://javascript.info/settimeout-setinterval
 
 let trashTime = setInterval(playGame, time)
 let trashTimeTwo = setInterval(playGame2, timeTwo)
