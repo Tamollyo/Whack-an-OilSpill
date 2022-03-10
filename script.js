@@ -47,15 +47,15 @@ timeSet = () => {
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 30 && score <= 40) {
-    time = 1000
+    time = 1500
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 40 && score <= 50) {
-    time = 500
+    time = 1000
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 50 && score <= 60) {
-    time = 400
+    time = 800
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   }

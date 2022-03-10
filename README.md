@@ -121,7 +121,7 @@ https://oceanservice.noaa.gov/ocean/help-our-ocean.html
 
 https://color.adobe.com/search?q=ocean
 
-#### Duck Photos
+#### Duck Content
 
 https://media.istockphoto.com/photos/rubber-duck-covered-in-oil-picture-id134546936?k=6&m=134546936&s=612x612&w=0&h=4N9DcNeleYOmYgnw6sEPM1XGjmrX4osQuTiQeSLqClA=
 
@@ -130,6 +130,8 @@ https://media.istockphoto.com/photos/oil-slick-on-animal-picture-id182868583?k=6
 https://i0.wp.com/dynaimage.cdn.cnn.com/cnn/w_1200/http:%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F130515103957-hong-kong-duck-deflate-story-top.jpg?ssl=1
 
 https://www.yourlocalpaper.co.uk/wp-content/uploads/2017/07/Oily-duck.jpg
+
+https://quicksounds.com/library/sounds/duck
 
 #### Background Image
 
@@ -140,3 +142,4 @@ https://unsplash.com/
 https://javascript.info/settimeout-setinterval
 https://www.w3schools.com/js/js_operators.asp
 developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+https://www.geeksforgeeks.org/how-to-make-a-beep-sound-in-javascript/
