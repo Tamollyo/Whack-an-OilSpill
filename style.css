@@ -159,7 +159,8 @@ button:visited {
   padding: 10px;
 }
 
-.factsBK {
+.factsBK,
+.background {
   background-color: #03738c;
   opacity: 0.8;
 }

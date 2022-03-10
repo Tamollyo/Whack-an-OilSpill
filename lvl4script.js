@@ -48,8 +48,16 @@ duckFour.addEventListener('click', () => {
     highScore.innerText = hScore
   }
   tally.innerText = score
+  play()
   randomLocation()
 })
+
+let play = () => {
+  let audio = new Audio(
+    'https://quicksounds.com/sound/3351/duck-quack-1&autoplay=true'
+  )
+  audio.play()
+}
 
 restart.addEventListener('click', () => {
   score = 0
