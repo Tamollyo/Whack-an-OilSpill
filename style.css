@@ -136,3 +136,23 @@ button:hover {
 button:visited {
   color: #03738c;
 }
+
+.start {
+  padding: 10px;
+  grid-area: main;
+  width: 30%;
+}
+
+.facts {
+  grid-area: main;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  padding: 10px;
+}
+
+.factsBK {
+  background-color: #03738c;
+  opacity: 0.8;
+}
