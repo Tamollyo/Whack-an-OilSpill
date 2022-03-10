@@ -1,7 +1,7 @@
 let score = 0
 let hScore = sessionStorage.getItem(`highScore`)
 console.log(hScore)
-let time = 5000
+let time = 1000
 const trash = document.querySelector('.trash')
 const trashTwo = document.querySelector('.trashTwo')
 const trashThree = document.querySelector('.trashThree')

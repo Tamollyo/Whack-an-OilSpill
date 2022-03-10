@@ -64,9 +64,10 @@ _Whack-a-Mole with a twist_
 
 ###### GIT COMMIT
 
-    - Trash/Oil randomly appears on a 10x10 grid
+    - Trash/Oil randomly appears on a grid
         - Use a css grid style (flex/grid)
-      - Test grid sizes just in case 10x10 is too easy (or Hard!)
+      - Test grid sizes is too easy (or Hard!)
+        - Have objects appear randomly no matter the page size
 
 ###### GIT COMMIT
 

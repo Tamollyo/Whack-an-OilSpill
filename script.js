@@ -1,6 +1,6 @@
 let score = 0
 let hScore = 0
-let time = 5000
+let time = 1000
 const trash = document.querySelector('.trash')
 const tally = document.querySelector('.score')
 const highScore = document.querySelector('.highScore')
