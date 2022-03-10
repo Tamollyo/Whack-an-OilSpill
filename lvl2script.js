@@ -1,7 +1,6 @@
 let score = 0
 let hScore = 0
 let time = 5000
-let timeTwo = 3000
 const trash = document.querySelector('.trash')
 const trashTwo = document.querySelector('.trashTwo')
 const tally = document.querySelector('.score')
@@ -11,7 +10,7 @@ let randomTop
 let randomLeft
 
 trash.addEventListener('click', () => {
-  score += 2
+  score += 1
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
@@ -21,24 +20,29 @@ trash.addEventListener('click', () => {
 })
 
 trashTwo.addEventListener('click', () => {
-  score += 2
+  score += 4
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
   }
   tally.innerText = score
-  randomLocationTwo()
+  randomLocation()
 })
+
+let visible = () => {
+  if (score % 2 != 1) {
+    document.querySelector('.trashTwo').style.opacity = '0'
+  } else if (score % 2 === 0) {
+    document.querySelector('.trashTwo').style.opacity = '1'
+  }
+}
 
 restart.addEventListener('click', () => {
   score = 0
   tally.innerText = score
-  let time = 5000
-  let timeTwo = 3000
+  time = 3000
   clearInterval(trashTime)
-  clearInterval(trashTimeTwo)
   trashTime = setInterval(playGame, time)
-  trashTimeTwo = setInterval(playGame2, timeTwo)
 })
 
 randomLocation = () => {
@@ -48,15 +52,8 @@ randomLocation = () => {
   randomLeft = Math.floor(Math.random() * (max - min) + min)
   trash.style.top = randomTop + '%'
   trash.style.left = randomLeft + '%'
-}
-
-randomLocationTwo = () => {
-  min = Math.ceil(80)
-  max = Math.floor(20)
-  randomTop = Math.floor(Math.random() * (max - min) + min)
-  randomLeft = Math.floor(Math.random() * (max - min) + min)
-  trashTwo.style.top = randomTop + '%'
-  trashTwo.style.left = randomLeft + '%'
+  trashTwo.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
+  trashTwo.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
 }
 
 timeSet = () => {
@@ -85,41 +82,10 @@ timeSet = () => {
   }
 }
 
-timeSetTwo = () => {
-  if (score <= 10) {
-    timeTwo = 2000
-  } else if (score > 10 && score <= 20) {
-    timeTwo = 1000
-    clearInterval(trashTime)
-    trashTimeTwo = setInterval(playGame, timeTwo)
-  } else if (score > 20 && score <= 30) {
-    timeTwo = 750
-    clearInterval(trashTime)
-    trashTimeTwo = setInterval(playGame, timeTwo)
-  } else if (score > 30 && score <= 40) {
-    timeTwo = 600
-    clearInterval(trashTime)
-    trashTimeTwo = setInterval(playGame, timeTwo)
-  } else if (score > 40 && score <= 50) {
-    timeTwo = 500
-    clearInterval(trashTime)
-    trashTimeTwo = setInterval(playGame, timeTwo)
-  } else if (score > 50 && score <= 60) {
-    timeTwo = 400
-    clearInterval(trashTime)
-    trashTimeTwo = setInterval(playGame, timeTwo)
-  }
-}
-
 let playGame = () => {
   randomLocation()
   timeSet()
-}
-
-let playGame2 = () => {
-  randomLocationTwo()
-  timeSetTwo()
+  visible()
 }
 
 let trashTime = setInterval(playGame, time)
-let trashTimeTwo = setInterval(playGame2, timeTwo)
