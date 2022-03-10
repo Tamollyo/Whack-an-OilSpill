@@ -3,9 +3,12 @@ let hScore = sessionStorage.getItem(`highScore`)
 console.log(hScore)
 let time = 1000
 const trash = document.querySelector('.trash')
-const trashTwo = document.querySelector('.trashTwo')
 const trashThree = document.querySelector('.trashThree')
 const duckFour = document.querySelector('.duckFour')
+const duckFive = document.querySelector('.duckFive')
+const duckSix = document.querySelector('.duckSix')
+const duckSeven = document.querySelector('.duckSeven')
+const duckEight = document.querySelector('.duckEight')
 const tally = document.querySelector('.score')
 const highScore = document.querySelector('.highScore')
 highScore.innerHTML = hScore
@@ -15,17 +18,6 @@ let randomLeft
 
 trash.addEventListener('click', () => {
   score += 1
-  if (score > hScore) {
-    hScore = score
-    highScore.innerText = hScore
-    sessionStorage.setItem(`highScore`, hScore)
-  }
-  tally.innerText = score
-  randomLocation()
-})
-
-trashTwo.addEventListener('click', () => {
-  score += 2
   if (score > hScore) {
     hScore = score
     highScore.innerText = hScore
@@ -58,6 +50,54 @@ duckFour.addEventListener('click', () => {
   randomLocation()
 })
 
+duckFive.addEventListener('click', () => {
+  score -= 3
+  if (score > hScore) {
+    hScore = score
+    highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
+  }
+  tally.innerText = score
+  play()
+  randomLocation()
+})
+
+duckSix.addEventListener('click', () => {
+  score -= 3
+  if (score > hScore) {
+    hScore = score
+    highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
+  }
+  tally.innerText = score
+  play()
+  randomLocation()
+})
+
+duckSeven.addEventListener('click', () => {
+  score -= 3
+  if (score > hScore) {
+    hScore = score
+    highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
+  }
+  tally.innerText = score
+  play()
+  randomLocation()
+})
+
+duckEight.addEventListener('click', () => {
+  score -= 3
+  if (score > hScore) {
+    hScore = score
+    highScore.innerText = hScore
+    sessionStorage.setItem(`highScore`, hScore)
+  }
+  tally.innerText = score
+  play()
+  randomLocation()
+})
+
 let play = () => {
   let audio = new Audio('./img/Duck Quack 1 - QuickSounds.com (1).mp3')
   audio.play()
@@ -78,23 +118,29 @@ randomLocation = () => {
   randomLeft = Math.floor(Math.random() * (max - min) + min)
   trash.style.top = randomTop + '%'
   trash.style.left = randomLeft + '%'
-  trashTwo.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
-  trashTwo.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
   trashThree.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
   trashThree.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
   duckFour.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
   duckFour.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckFive.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckFive.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckSix.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckSix.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckSeven.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckSeven.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckEight.style.top = Math.floor(Math.random() * (max - min) + min) + '%'
+  duckEight.style.left = Math.floor(Math.random() * (max - min) + min) + '%'
 }
 
 timeSet = () => {
   if (score <= 10) {
-    time = 4000
+    time = 2000
   } else if (score > 10 && score <= 20) {
-    time = 3000
+    time = 1500
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 20 && score <= 30) {
-    time = 2000
+    time = 1250
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 30 && score <= 40) {
@@ -102,7 +148,7 @@ timeSet = () => {
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 40 && score <= 50) {
-    time = 500
+    time = 800
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 50 && score <= 60) {

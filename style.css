@@ -41,6 +41,34 @@ img {
   left: 60%;
 }
 
+.duckFive {
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
+
+.duckSix {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+
+.duckSeven {
+  display: block;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+}
+
+.duckEight {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 80%;
+}
+
 footer {
   grid-area: footer;
   justify-content: end;
