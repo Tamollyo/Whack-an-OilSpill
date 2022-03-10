@@ -136,6 +136,14 @@ https://i0.wp.com/dynaimage.cdn.cnn.com/cnn/w_1200/http:%2F%2Fcdn.cnn.com%2Fcnnn
 
 https://www.yourlocalpaper.co.uk/wp-content/uploads/2017/07/Oily-duck.jpg
 
+https://seaduckjv.org/wp-content/wow-aqua-3/data1/images/kingeideronwater.jpg
+
+https://seaduckjv.org/wp-content/wow-aqua-3/data1/images/hoodedmerganser.jpg
+
+https://wallpapercave.com/wp/vUZUBRZ.jpg
+
+https://www.animalspot.net/wp-content/uploads/2019/10/Baby-Duck.jpg
+
 https://quicksounds.com/library/sounds/duck
 
 #### Background Image
