@@ -105,7 +105,6 @@ _Whack-a-Mole with a twist_
 
 ## Style
 
-- 10 x 10 grid
 - Color Palette Reference: https://color.adobe.com/search?q=ocean
 
 * Bonus option: Use imagery or icons to represent different items

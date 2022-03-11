@@ -95,6 +95,10 @@ timeSet = () => {
     time = 600
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
+  } else if (score > 60) {
+    time = 500
+    clearInterval(trashTime)
+    trashTime = setInterval(playGame, time)
   }
 }
 

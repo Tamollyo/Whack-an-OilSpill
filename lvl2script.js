@@ -57,17 +57,18 @@ randomLocation = () => {
 
 timeSet = () => {
   if (score <= 10) {
-    time = 3000
-    timeTwo = 1000
-  } else if (score > 10 && score <= 12) {
     time = 2000
+    trash.style.visibility = 'hidden'
+    trashTwo.style.visibility = 'visible'
+  } else if (score > 10 && score <= 12) {
+    time = 1990
+    trash.style.visibility = 'visible'
     trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 12 && score <= 14) {
-    time = 2000
+    time = 1900
     trashTwo.style.visibility = 'visible'
-    trash.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 14 && score <= 30) {
@@ -76,17 +77,22 @@ timeSet = () => {
     trashTwo.style.visibility = 'visible'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
-  } else if (score > 30 && score <= 40) {
+  } else if (score > 30 && score <= 32) {
     time = 1500
     trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
-  } else if (score > 40 && score <= 50) {
+  } else if (score > 32 && score <= 36) {
+    time = 1400
+    trashTwo.style.visibility = 'hidden'
+    clearInterval(trashTime)
+    trashTime = setInterval(playGame, time)
+  } else if (score > 36 && score <= 50) {
     time = 1000
     trashTwo.style.visibility = 'visible'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
-  } else if (score > 50 && score <= 60) {
+  } else if (score > 50) {
     time = 700
     trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)

@@ -57,7 +57,7 @@ timeSet = () => {
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 50 && score <= 51) {
-    time = 1000
+    time = 900
     alert('Nice work! Head to the next level if you are ready!')
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
