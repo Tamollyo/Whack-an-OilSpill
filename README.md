@@ -37,7 +37,7 @@ _Whack-a-Mole with a twist_
 - Did you know about 8 million pounds of trash get put into the ocean each day? [Reference](https://www.condorferries.co.uk/plastic-in-the-ocean-statistics#:~:text=Every%20day%20around%208%20million,square%20kilometers%20%E2%80%93%20bigger%20than%20Texas)
 
 - This game is a take on the classic game Whack-A-Mole. You must WHACK the trash out of our oceans, this is as simple as find and click. Once you've sucessfully cleaned up the trash your score will increase!
-- OK! Let's practice cleaning up, click start to begin:
+- OK! Let's practice cleaning up, [Click start to begin!](https://cleantheocean.surge.sh/)
 
 ## Process
 
