@@ -59,12 +59,18 @@ timeSet = () => {
   if (score <= 10) {
     time = 3000
     timeTwo = 1000
-  } else if (score > 10 && score <= 20) {
+  } else if (score > 10 && score <= 12) {
     time = 2000
     trashTwo.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
-  } else if (score > 20 && score <= 30) {
+  } else if (score > 12 && score <= 14) {
+    time = 2000
+    trashTwo.style.visibility = 'visible'
+    trash.style.visibility = 'hidden'
+    clearInterval(trashTime)
+    trashTime = setInterval(playGame, time)
+  } else if (score > 14 && score <= 30) {
     time = 1750
     timeTwo = 700
     trashTwo.style.visibility = 'visible'

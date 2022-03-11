@@ -2,6 +2,8 @@
 
 _Whack-a-Mole with a twist_
 
+[Link to Whack An Oil Spill](https://cleantheocean.surge.sh/)
+
 ##### _By Molly Obermeier_ | [LinkedIn](https://www.linkedin.com/in/marie-obermeier-6b6b03158/)
 
 ## Description
