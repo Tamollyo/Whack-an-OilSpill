@@ -145,7 +145,7 @@ randomLocation = () => {
 
 timeSet = () => {
   if (score <= 10) {
-    time = 2000
+    time = 1700
   } else if (score > 10 && score <= 20) {
     time = 1500
     clearInterval(trashTime)
