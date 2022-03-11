@@ -151,6 +151,7 @@ timeSet = () => {
   } else if (score > 10 && score <= 15) {
     time = 1500
     trash.style.visibility = 'visible'
+    duckSix.style.visibility = 'hidden'
     trashTwo.style.visibility = 'hidden'
     duckSeven.style.visibility = 'visible'
     clearInterval(trashTime)
@@ -159,21 +160,26 @@ timeSet = () => {
     time = 1250
     trashTwo.style.visibility = 'visible'
     duckEight.style.visibility = 'hidden'
+    duckSix.style.visibility = 'visible'
     trash.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 22 && score <= 30) {
     time = 1150
     trash.style.visibility = 'visible'
+    trashThree.style.visibility = 'hidden'
     duckEight.style.visibility = 'visible'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 30 && score <= 40) {
     time = 1000
+    trashThree.style.visibility = 'visible'
+    duckSix.style.visibility = 'hidden'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 40 && score <= 50) {
     time = 800
+    duckSix.style.visibility = 'visible'
     clearInterval(trashTime)
     trashTime = setInterval(playGame, time)
   } else if (score > 50 && score <= 60) {
